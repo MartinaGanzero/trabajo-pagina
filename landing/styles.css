@@ -2,6 +2,7 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
 }
 
 nav {
@@ -18,7 +19,7 @@ p {
     font-size: 1.5rem;
 }
 
-footer{
+footer {
     background-color: #e3d5ca;
     width: 100%;
     margin-top: 100px;
@@ -28,11 +29,11 @@ footer{
     justify-content: space-around;
 }
 
-footer p{
+footer p {
     font-size: 1rem;
 }
 
-/* Class */ 
+/* Class */
 .logoNav {
     height: 100px;
     width: 100px;
@@ -118,30 +119,31 @@ footer p{
     font-size: 15px;
 }
 
-.textInfo p{
+.textInfo p {
     font-size: 1.2rem;
     text-align: center;
     margin: 0 250px;
 }
 
-.productos{
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-content: center;
-align-items: center;
+.productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.titleCard{
+.titleCard {
     font-size: 2.5rem;
     text-align: center;
-    color: rgb(172 154 154);;
+    color: rgb(172 154 154);
 }
 
-.card{
-    width:15rem;
+.card {
+    width: 15rem;
     height: 22.5rem;
-    background-color:#e3d5ca ;
+    background-color: #e3d5ca;
     border-radius: 3%;
     text-align: center;
     display: flex;
@@ -151,7 +153,7 @@ align-items: center;
     justify-content: center;
 }
 
-.card button{
+.card button {
     background-color: #505050;
     color: #e2d0c1;
     width: 130px;
@@ -161,7 +163,7 @@ align-items: center;
     cursor: pointer;
 }
 
-.imgCard{
+.imgCard {
     height: 15rem;
     width: 10rem;
     margin: 10px 30px 10px 0;
@@ -169,16 +171,75 @@ align-items: center;
     margin: 0;
 }
 
-.imgFooter{
+.imgFooter {
     height: 8rem;
     width: 8rem;
     border-radius: 50%;
 }
 
-.listFooter{
-list-style: none;
+.listFooter {
+    list-style: none;
 }
 
-i{
+i {
     color: #505050;
+}
+
+/* media queries */
+
+@media (max-width: 1100px) {
+    .productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .titleCard{
+      font-size: 30px; 
+    }
+
+    .textInfo p{
+        margin: 0 50px;
+    }
+}
+
+@media (max-width:770px){
+    .itemsNav {
+        display: none;
+    }
+
+    .infoHero{
+        margin: 0 40px;
+    }
+
+    .infoHero p{
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .title{
+        font-size: 35px;
+    }
+    .subtitle{
+        font-size: 30px;
+    }
+
+    .imgFooter{
+        margin-left: 20px;
+    }
+    .listFooter{
+        margin-right: 30px;
+    }
+}
+
+@media (max-width:705px){
+    .imgHero{
+        display: none;
+    }
+    .imgFooter{
+        height: 100px;
+        width: 100px;
+    }
 }
